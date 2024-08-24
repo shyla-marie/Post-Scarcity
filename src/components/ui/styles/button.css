@@ -2,7 +2,7 @@
 
 .button {
     padding: 8px 16px;
-    border: white; /*rgb(62, 255, 242) */
+    border: rgb(62, 255, 242); /*rgb(62, 255, 242) */
     border-radius: 4px;
     background-color: #8d277c;
     color: black;
@@ -12,10 +12,10 @@
   }
   
   .button:hover {
-    background-color: #49fd52;
+    background-color: rgb(62, 255, 242);
   }
 
   .button:disabled {
-    background-color: #ff005d;
+    background-color: #8d277c;
     cursor: not-allowed;
   }  

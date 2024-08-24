@@ -4,11 +4,11 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: black;
+    background-color: rgb(44, 67, 101);
   }
   
   .app {
-    max-width: 1600px;  /* Increased to accommodate two networks side by side */
+    max-width: 2400px;  /* Increased to accommodate two networks side by side */
     margin: 0 auto;
   }
   
@@ -20,7 +20,7 @@ body {
   
   .network-item {
     width: 48%;  /* Adjust as needed */
-    margin-bottom: 20px;
+    margin-bottom: 200px;
   }
   
   /* Responsive design */

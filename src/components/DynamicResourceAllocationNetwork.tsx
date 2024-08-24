@@ -57,7 +57,7 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
 
   // Initialize network
   useEffect(() => {
-    const initialNodes: Node[] = Array.from({ length: 10 }, (_, i) => ({
+    const initialNodes: Node[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       energy: 100,
       water: 100,
@@ -176,7 +176,7 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
               linkColor={linkColor}
               linkDirectionalParticles={2}
               linkDirectionalParticleSpeed={(d: Link) => Math.abs(d[selectedResource]) * 0.01}
-              nodeRelSize={8}
+              nodeRelSize={5}
               linkWidth={2}
             />
           </div>

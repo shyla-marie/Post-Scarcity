@@ -51,7 +51,7 @@ interface Link {
 
 type ResourceType = 'energy' | 'water' | 'food';
 
-const DynamicResourceAllocationNetwork: React.FC = () => {
+const ResourceAllocationNetwork: React.FC = () => {
   const [nodes, setNodes] = useState<Node[]>([]);
   const [links, setLinks] = useState<Link[]>([]);
   const [selectedResource, setSelectedResource] = useState<ResourceType>('energy');
@@ -60,7 +60,7 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
 
   // Initialize network
   useEffect(() => {
-    const initialNodes: Node[] = Array.from({ length: 10 }, (_, i) => ({
+    const initialNodes: Node[] = Array.from({ length: 20 }, (_, i) => ({
       id: i,
       energy: 100,
       water: 100,
@@ -152,10 +152,10 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
 
   return (
     <div>
-      <h2>Dynamic Resource Allocation Network</h2>
+      <h2>Static Resource Allocation Network</h2>
       <Card className="w-full max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle>Resource Allocation Network</CardTitle>
+          <CardTitle>Static Resource Allocation Network</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="mb-4">
@@ -197,7 +197,7 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
               linkColor={(link: Link) => 
                 link[selectedResource] > 0 ? 'green' : 
                 link[selectedResource] < 0 ? 'red' : 
-                'gray'
+                'white'
               }
               linkDirectionalParticles={2}
               linkDirectionalParticleSpeed={(d: Link) => Math.abs(d[selectedResource]) * 0.01}
@@ -210,7 +210,7 @@ const DynamicResourceAllocationNetwork: React.FC = () => {
   );
 };
 
-export default DynamicResourceAllocationNetwork;
+export default ResourceAllocationNetwork;
 
 
 
