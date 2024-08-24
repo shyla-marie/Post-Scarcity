@@ -1,7 +1,7 @@
 // src/components/ui/slider.js
 
 import React, { useState } from 'react';
-import './slider.css';
+import './styles/slider.css';
 
 export const Slider = ({ min, max, step, value, onValueChange }) => {
   const [sliderValue, setSliderValue] = useState(value[0]);

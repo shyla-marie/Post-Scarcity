@@ -1,7 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import ResourceAllocationNetwork from './ResourceAllocationNetwork';
-import DynamicResourceAllocationNetwork from './DynamicResourceAllocationNetwork';
+import ResourceAllocationNetwork from './components/ResourceAllocationNetwork';
+import DynamicResourceAllocationNetwork from './components/DynamicResourceAllocationNetwork';
 
 const container = document.getElementById('root');
 const root = createRoot(container);

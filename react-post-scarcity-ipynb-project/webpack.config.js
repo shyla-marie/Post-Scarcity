@@ -2,15 +2,10 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src'),
-    },
-  },
+  entry: './src/index.js', // Entry point of the application
   output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'), // Output directory
+    filename: 'bundle.js' // Output file name
   },
   module: {
     rules: [
@@ -32,5 +27,20 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx'], // Resolve these extensions
+    alias: {
+      '@': path.resolve(__dirname, 'src'), // Alias for the src directory
+      '@components/ui/slider': path.resolve(__dirname, 'src/components/ui/slider'),
+      '@components/ui/button': path.resolve(__dirname, 'src/components/ui/button'),
+      '@components/ui/select': path.resolve(__dirname, 'src/components/ui/select'),
+      '@components/ui/card': path.resolve(__dirname, 'src/components/ui/card')
+    }
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'), // Serve content from the dist directory
+    compress: true, // Enable gzip compression
+    port: 9000 // Port to run the dev server
   }
 };

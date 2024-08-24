@@ -1,0 +1,27 @@
+/* CSS for Card component (card.css) */
+/* src/components/ui/styles/card.css */
+
+.card {
+    background: black;
+    border: 1px solid #49fd52;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    border-bottom: 1px solid #49fd52;
+    padding: 16px;
+  }
+  
+  .card-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #8d277c;
+  }
+  
+  .card-content {
+    padding: 16px;
+  }

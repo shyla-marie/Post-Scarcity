@@ -1,7 +1,7 @@
 // src/components/ui/card.js
 
 import React from 'react';
-import './card.css';
+import './styles/card.css';
 
 export const Card = ({ children, className, ...props }) => (
   <div className={`card ${className}`} {...props}>

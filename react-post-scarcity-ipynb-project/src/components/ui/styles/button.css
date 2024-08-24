@@ -1,0 +1,21 @@
+/* src/components/ui/styles/button.css */
+
+.button {
+    padding: 8px 16px;
+    border: white; /*rgb(62, 255, 242) */
+    border-radius: 4px;
+    background-color: #8d277c;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s;
+  }
+  
+  .button:hover {
+    background-color: #49fd52;
+  }
+
+  .button:disabled {
+    background-color: #ff005d;
+    cursor: not-allowed;
+  }  

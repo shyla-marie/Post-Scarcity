@@ -1,7 +1,7 @@
 // src/components/ui/select.js
 
 import React, { useState } from 'react';
-import './select.css';
+import './styles/select.css';
 
 export const Select = ({ children, onValueChange, placeholder }) => {
   const [isOpen, setIsOpen] = useState(false);

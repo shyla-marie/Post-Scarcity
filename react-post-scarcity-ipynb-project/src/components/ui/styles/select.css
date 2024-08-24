@@ -1,0 +1,40 @@
+/* src/components/ui/styles/select.css */
+/* CSS for Select component (select.css) */
+
+.select-container {
+  position: relative;
+  width: 200px;
+}
+
+.select-trigger {
+  padding: 8px 12px;
+  border: 1px solid rgb(62, 255, 242);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.select-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #8d277c;
+  border: 1px solid white;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+}
+
+.select-item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.select-item:hover {
+  background: #49fd52;
+}
+.select {
+    padding: 8px;
+    border: 1px solid rgb(62, 255, 242);
+    border-radius: 4px;
+    font-size: 16px;
+  }
