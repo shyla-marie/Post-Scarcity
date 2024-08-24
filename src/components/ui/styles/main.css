@@ -1,0 +1,46 @@
+/* Main CSS File */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  .app {
+    max-width: 1600px;  /* Increased to accommodate two networks side by side */
+    margin: 0 auto;
+  }
+  
+  .network-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .network-item {
+    width: 48%;  /* Adjust as needed */
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 1200px) {
+    .network-item {
+      width: 100%;
+    }
+  }
+  
+  /* Some utility classes */
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-20 {
+    margin-top: 20px;
+  }
+  
+  .mb-20 {
+    margin-bottom: 20px;
+  }
+  
+  /* You can add more global styles here as needed */
