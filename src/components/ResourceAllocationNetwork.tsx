@@ -152,10 +152,10 @@ const ResourceAllocationNetwork: React.FC = () => {
 
   return (
     <div>
-      <h2>Static Resource Allocation Network</h2>
+      <h2>Dynamic Resource Allocation Network</h2>
       <Card className="w-full max-w-4xl mx-auto">
         <CardHeader>
-          <CardTitle>Static Resource Allocation Network</CardTitle>
+          <CardTitle>Static vs. Dynamic Resource Allocation Network</CardTitle>
         </CardHeader>
         <CardContent>
           <div className="mb-4">
