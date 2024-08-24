@@ -122,38 +122,41 @@ const DynamicResourceAllocationNetwork = () => {
   }, [selectedResource]);
 
   return (
-    <Card className="w-full max-w-4xl mx-auto">
-      <CardHeader>
-        <CardTitle>Dynamic Resource Allocation Network</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <div className="mb-4">
-          <Select onValueChange={value => setSelectedResource(value)}>
-            <SelectTrigger>
-              <SelectValue placeholder="Select resource" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="energy">Energy</SelectItem>
-              <SelectItem value="water">Water</SelectItem>
-              <SelectItem value="food">Food</SelectItem>
-            </SelectContent>
-          </Select>
-        </div>
-        <div style={{ height: '500px', marginTop: '20px' }}>
-          <ForceGraph2D
-            graphData={{ nodes, links }}
-            nodeLabel={node => `Node ${node.id}: ${selectedResource} = ${node[selectedResource].toFixed(2)}, Change = ${node[`${selectedResource}Change`].toFixed(2)}`}
-            linkLabel={link => `${selectedResource} flow: ${link[selectedResource].toFixed(2)}, Change = ${link[`${selectedResource}Change`].toFixed(2)}`}
-            nodeColor={nodeColor}
-            linkColor={linkColor}
-            linkDirectionalParticles={2}
-            linkDirectionalParticleSpeed={d => Math.abs(d[selectedResource]) * 0.01}
-            nodeRelSize={8}
-            linkWidth={2}
-          />
-        </div>
-      </CardContent>
-    </Card>
+    <div>
+      <h2>Dynamic Resource Allocation Network</h2>
+      <Card className="w-full max-w-4xl mx-auto">
+        <CardHeader>
+          <CardTitle>Dynamic Resource Allocation Network</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="mb-4">
+            <Select onValueChange={value => setSelectedResource(value)}>
+              <SelectTrigger>
+                <SelectValue placeholder="Select resource" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="energy">Energy</SelectItem>
+                <SelectItem value="water">Water</SelectItem>
+                <SelectItem value="food">Food</SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <div style={{ height: '500px', marginTop: '20px' }}>
+            <ForceGraph2D
+              graphData={{ nodes, links }}
+              nodeLabel={node => `Node ${node.id}: ${selectedResource} = ${node[selectedResource].toFixed(2)}, Change = ${node[`${selectedResource}Change`].toFixed(2)}`}
+              linkLabel={link => `${selectedResource} flow: ${link[selectedResource].toFixed(2)}, Change = ${link[`${selectedResource}Change`].toFixed(2)}`}
+              nodeColor={nodeColor}
+              linkColor={linkColor}
+              linkDirectionalParticles={2}
+              linkDirectionalParticleSpeed={d => Math.abs(d[selectedResource]) * 0.01}
+              nodeRelSize={8}
+              linkWidth={2}
+            />
+          </div>
+        </CardContent>
+      </Card>
+    </div>
   );
 };
 
